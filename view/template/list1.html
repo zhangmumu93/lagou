@@ -1,0 +1,15 @@
+ 
+    <ul  class="list1">
+       <!--  url-sref中通过跳转页面show（传入json对象即为对应url上的参数） -->
+        <li class="clearfix" ui-sref="show({id:item.id})" ng-repeat="item in list|filterByObj:filterObj">
+            <div class="left"><img ng-src="{{item.imageUrl}}" alt=""></div>
+            <div class="right">
+                <div class='p1' >{{item.companyName}}[{{item.cityName}}]{{item.industryName}} {{item.scaleName}}</div>
+                <p class='red'>{{item.salaryName}}</p>
+                <p>{{item.date}}</p>
+                <span ng-click="$event.stopPropagation();select(item);" ng-if="isFavorite" class="icon {{item.select?'star-active':'star'}}"></span>
+            </div>
+
+        </li>
+    </ul>
+ 

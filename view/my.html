@@ -1,0 +1,15 @@
+ <div class="myMain2" ng-show="name">
+	<div class="myHeader">
+	   <img ng-src="{{image}}" alt="">
+	   <p ng-bind="name"></p>
+    </div>
+    <div class="myCenter">
+    	<button ui-sref="post">投递</button>
+    	<button ui-sref="favorite">收藏</button>
+    </div>
+    <button ng-click="loginOut();">退出登录</button>
+</div>
+<div class="myMain" ng-hidden="name">
+	<button ui-sref="login">去登陆</button>
+</div>
+<div app-footer></div>

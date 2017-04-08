@@ -1,0 +1,22 @@
+<div class="login">
+	<form action="#" name="form" >
+	    <div class="top">
+	    	 <div class="line">
+		     <div class="image"><img ng-src="../images/account.png" alt=""></div>
+		     <input ng-model="user.phone" validator="phone,required"  type="text" name="phone" placeholder="输入手机号">
+		     </div>
+		     <div class="line">
+		     <div class="image"><img ng-src="../images/lock.png" alt=""></div>
+		     <input  ng-model="user.password" validator="password,required" type="password"  name="password" placeholder="输入密码">
+		     </div>
+	    </div>
+		<div class="botton">
+		  <p>
+		  <button class="active"  validation-submit="form" ng-click="submit()">登录</button>
+		 </p>
+		  <p>
+		  <button  ui-sref="regist" >注册</button>
+		 </p>
+		 </div>
+	</form>
+</div>

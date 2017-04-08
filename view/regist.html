@@ -1,0 +1,28 @@
+<div class="regist">
+	<form action="#" name="form">
+	    <div class="top">
+	    	 <div class="line">
+		      <div class="img"><img ng-src="../images/account.png" alt=""> </div>
+		      <input name="phone" ng-model="user.phone" validator="phone,required" type="text" placeholder="输入手机号">
+		    </div>
+		     <div class="line">
+		       <div class="img"><img ng-src="../images/account.png" alt=""></div> 
+		     <input  name="password" ng-model="user.password" validator="password,required" type="password" placeholder="输入密码">
+		    </div>
+	    </div>
+	      <div class="meddile">
+	    	 <p>
+		     <input name="code" validator="required" ng-model="user.code" type="text" placeholder="短信验证码">
+		     <i ng-click="send();" ng-bind="time===''?'发送短信':time"></i>
+		     </p>   
+	      </div>
+		<div class="botton">
+		  <p>
+		  <button class="active" ui-sref="login" >登录</button>
+		 </p>
+		  <p>
+		  <button  validation-submit="form" ng-click="submit()" >注册</button>
+		 </p>
+		 </div>
+	</form>
+</div>

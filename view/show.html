@@ -1,0 +1,35 @@
+<div class="show">
+   
+   	<div class="head">
+		<span ng-click="back()"><</span>
+		<span>职位详情</span>
+	</div>
+	<div class="main">
+		<div class="top">
+			<p><span>{{positions.name}}</span>{{positions.salaryName}}</p>
+			<p><span>{{positions.cityName}}</span><span>{{positions.experience}}</span><span>{{positions.education}}</span></p>
+			<p><span>{{positions.benefit}}</span></p>
+			<img class="images" ng-show="isLogin" ng-src="{{imagePath}}" ng-click="imageActive()" alt="">
+		</div>
+		<div class="med clearfix"  ui-sref="company({id:positions.companyId})">
+			<div class="left">
+				<img ng-src="{{positions.imageUrl}}" alt="">
+			</div>
+			<div class="right">
+				<p>{{positions.companyName}}</p>
+			    <p>{{positions.industryName}}/{{positions.state}}/{{positions.scaleName}}</p>
+			</div>
+			
+		</div>
+		<div class="detail">
+			<h2>职位描述</h2>
+			<p>  {{positions.description}} </p>
+			 
+		</div>
+	</div>
+	<div class="foot">
+		<p   ng-click="send()"  ng-bind="message"></p>
+	</div>
+ 
+	
+</div>
